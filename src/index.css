@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app-container {
+  border: 5px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.list-container {
+  list-style-type: none;
+  width: 100%;
+}
+
+.input-label {
+  grid-area: 'input';
+}
+
+.button-label {
+  grid-area: 'button';
+}
+
+.task-adder {
+  border: none;
+  margin: 0;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 'input button';
+  align-items: center;
+}
+
+/* ---------- Input Field ---------- */
+
+.input-field {
+  border: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-field:focus {
+  border: 1px solid #333;
+}
+
+/* ---------- End of Input Field ---------- */
+
+/* ---------- Add Button ---------- */
+
+.add-button {
+  background-color: white; /* Green */
+  border: 1px solid;
+  border-color: #2f80ed;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: auto;
+  transition: all 300ms ease-in-out;
+}
+
+.add-button1 {
+  background-color: #2f80ed;; 
+  color: white;
+  border-color: #2f80ed;
+}
+
+.add-button1:hover {
+  background-color: white;
+  color: #2f80ed;
+}
+
+.add-button:focus {
+  outline: none;
+}
+
+.add-button:active{
+  transform: translateY(4px);
+}
+
+/* ---------- End of Add Button ---------- */
+
+.list-item {
+  border: 1px solid blue;
+}
+
+/* ---------- Delete Button ---------- */
+
+.delete-button {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid red;
+}
+
+/* ---------- End of Delete Button ---------- */
