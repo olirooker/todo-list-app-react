@@ -8,11 +8,18 @@ class App extends React.Component {
     todos: [{ item: "The first item" }],
   };
 
+  componentDidMount() {
+    const savedState = JSON.parse(localStorage.getItem("state"));
+    this.setState(savedState);
+  };
+
   addToDo = (newItem) => {
     this.setState((currentState) => {
       const newState = { todos: [newItem, ...currentState.todos] };
+      localStorage.setItem("state", JSON.stringify(this.state));
       return newState;
     });
+    // localStorage.setItem("state", JSON.stringify(this.state));
   };
 
   deleteToDo = (name) => {
@@ -23,8 +30,10 @@ class App extends React.Component {
       const newState = {
         todos: newTasks
       }
+      localStorage.setItem("state", JSON.stringify(this.state));
       return newState;
     })
+    // localStorage.setItem("state", JSON.stringify(this.state));
   };
 
   render() {
@@ -35,7 +44,7 @@ class App extends React.Component {
         <List todos={this.state.todos} deleteToDo={this.deleteToDo} />
       </div >
     );
-  }
+  };
 }
 
 export default App;
