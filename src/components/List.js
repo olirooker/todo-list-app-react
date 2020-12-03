@@ -7,7 +7,7 @@ const List = (props) => {
             {props.tasks.map((task) => {
                 return <li class="list-item" key={task.task} id={task.task}>
                     {task.task}
-                    <button class="delete-button" onClick={() => { props.deleteTask(task.task) }}>X</button>
+                    <button class="delete-button" onClick={() => { props.deleteTask(task.task) }}><i class="fa fa-trash"></i></button>
                 </li>;
             })}
         </ul>

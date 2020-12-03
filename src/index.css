@@ -13,6 +13,11 @@ code {
     monospace;
 }
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .app-container {
   border: 5px solid green;
   display: flex;
@@ -23,11 +28,6 @@ code {
 
 label {
   margin: 5px;
-}
-
-.list-container {
-  list-style-type: none;
-  width: 100%;
 }
 
 .input-label {
@@ -105,17 +105,34 @@ label {
 
 /* ---------- End of Add Button ---------- */
 
+.list-container {
+  list-style-type: none;
+  width: 100%;
+  align-self: center;
+  border: 5px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
 .list-item {
-  border: 1px solid blue;
-  
+  border: 5px solid blue;
+  text-align: center;
+  font-weight: 400;
 }
 
 /* ---------- Delete Button ---------- */
 
 .delete-button {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid red;
+  display: inline-block;
+  border: none;
+  padding: 10px 20px;
+  color: lightgray;
+  /* background-color: #e13d3a; */
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 /* ---------- End of Delete Button ---------- */
