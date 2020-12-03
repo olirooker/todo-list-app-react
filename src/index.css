@@ -21,6 +21,10 @@ code {
   width: 100vw;
 }
 
+label {
+  margin: 5px;
+}
+
 .list-container {
   list-style-type: none;
   width: 100%;
@@ -32,6 +36,7 @@ code {
 
 .button-label {
   grid-area: 'button';
+  width: 100%;
 }
 
 .task-adder {
@@ -39,7 +44,7 @@ code {
   margin: 0;
   width: 60vw;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 4fr auto;
   grid-template-areas: 'input button';
   align-items: center;
 }
@@ -51,8 +56,9 @@ code {
   border: 1px solid #e0e0e0;
   border-radius: 25px;
   outline: none;
-  padding: 10px;
+  padding: 10px 0 10px 0px;
   width: 100%;
+  text-indent: 15px;
 }
 
 .input-field:focus {
@@ -74,7 +80,7 @@ code {
   text-decoration: none;
   display: inline-block;
   font-size: 0.8rem;
-  margin: auto;
+  margin: 0;
   transition: all 300ms ease-in-out;
 }
 
@@ -101,6 +107,7 @@ code {
 
 .list-item {
   border: 1px solid blue;
+  
 }
 
 /* ---------- Delete Button ---------- */
