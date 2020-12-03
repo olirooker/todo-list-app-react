@@ -3,11 +3,11 @@ import React from "react";
 const List = (props) => {
 
     return (
-        <ul class="list-container">
+        <ul className="list-container">
             {props.tasks.map((task) => {
-                return <li class="list-item" key={task.task} id={task.task}>
+                return <li className="list-item" key={task.task} id={task.task}>
                     {task.task}
-                    <button class="delete-button" onClick={() => { props.deleteTask(task.task) }}><i class="fa fa-trash"></i></button>
+                    <button className="delete-button" onClick={() => { props.deleteTask(task.task) }}><i className="fa fa-trash"></i></button>
                 </li>;
             })}
         </ul>

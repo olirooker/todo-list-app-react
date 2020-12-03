@@ -35,7 +35,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div class="app-container">
+      <div className="app-container">
         <Header />
         <TaskAdder addTask={this.addTask} />
         <List tasks={this.state.tasks} deleteTask={this.deleteTask} />

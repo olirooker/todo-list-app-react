@@ -18,10 +18,10 @@ class TaskAdder extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="task-adder">
-        <label class="input-label">
+        <label className="input-label">
           <input
             type="text"
-            class="input-field"
+            className="input-field"
             placeholder="add task"
             name="task"
             id="task"
@@ -30,8 +30,8 @@ class TaskAdder extends React.Component {
           />
         </label>
 
-        <label class="button-label">
-          <button type="submit" class="add-button add-button1">add</button>
+        <label className="button-label">
+          <button type="submit" className="add-button add-button1">add</button>
         </label>
       </form>
     );
