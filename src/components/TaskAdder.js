@@ -1,13 +1,13 @@
 import React from "react";
 
 class TaskAdder extends React.Component {
-  state = { task: "" };
+  state = { item: "" };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.task) {
-      this.props.addTask(this.state);
-      this.setState({ task: "" });
+    if (this.state.item) {
+      this.props.addToDo(this.state);
+      this.setState({ item: "" });
     }
   };
 
@@ -22,10 +22,10 @@ class TaskAdder extends React.Component {
           <input
             type="text"
             className="input-field"
-            placeholder="add task"
+            placeholder="add todo"
             name="task"
-            id="task"
-            value={this.state.task}
+            id="item"
+            value={this.state.item}
             onChange={this.handleChange}
           />
         </label>

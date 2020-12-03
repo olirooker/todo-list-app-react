@@ -5,31 +5,25 @@ import TaskAdder from "./components/TaskAdder";
 
 class App extends React.Component {
   state = {
-    tasks: [{ task: "The first task" }],
+    todos: [{ item: "The first item" }],
   };
 
-  addTask = (newTask) => {
+  addToDo = (newItem) => {
     this.setState((currentState) => {
-      const newState = { tasks: [newTask, ...currentState.tasks] };
+      const newState = { todos: [newItem, ...currentState.todos] };
       return newState;
     });
   };
 
-  deleteTask = (name) => {
-    console.log(name)
+  deleteToDo = (name) => {
     this.setState(previousState => {
-
-      const newTasks = previousState.tasks.filter(task => {
-        return task.task !== name;
+      const newTasks = previousState.todos.filter(todo => {
+        return todo.item !== name;
       })
-      console.log(newTasks)
-
       const newState = {
-        tasks: newTasks
+        todos: newTasks
       }
-
       return newState;
-
     })
   };
 
@@ -37,9 +31,8 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <Header />
-        <TaskAdder addTask={this.addTask} />
-        <List tasks={this.state.tasks} deleteTask={this.deleteTask} />
-
+        <TaskAdder addToDo={this.addToDo} />
+        <List todos={this.state.todos} deleteToDo={this.deleteToDo} />
       </div >
     );
   }
