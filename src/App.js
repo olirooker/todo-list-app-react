@@ -5,7 +5,8 @@ import TaskAdder from "./components/TaskAdder";
 
 class App extends React.Component {
   state = {
-    todos: [{ item: "The first item" }],
+    todos: [{ item: "The first item", isCompleted: false, }],
+    filterBy: null, // this would change depending on which button is pressed
   };
 
   componentDidMount() {
@@ -16,10 +17,10 @@ class App extends React.Component {
   addToDo = (newItem) => {
     this.setState((currentState) => {
       const newState = { todos: [newItem, ...currentState.todos] };
-      localStorage.setItem("state", JSON.stringify(this.state));
       return newState;
+    }, () => {
+      localStorage.setItem("state", JSON.stringify(this.state));
     });
-    // localStorage.setItem("state", JSON.stringify(this.state));
   };
 
   deleteToDo = (name) => {
@@ -30,17 +31,22 @@ class App extends React.Component {
       const newState = {
         todos: newTasks
       }
-      localStorage.setItem("state", JSON.stringify(this.state));
       return newState;
+    }, () => {
+      localStorage.setItem("state", JSON.stringify(this.state));
     })
-    // localStorage.setItem("state", JSON.stringify(this.state));
   };
+
+  // method here which will change the filterBy to complete, all or active
 
   render() {
     return (
       <div className="app-container">
         <Header />
         <TaskAdder addToDo={this.addToDo} />
+        <button>All</button>
+        <button>Active</button>
+        <button>Complete</button>
         <List todos={this.state.todos} deleteToDo={this.deleteToDo} />
       </div >
     );
