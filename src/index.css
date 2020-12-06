@@ -109,11 +109,13 @@ label {
   list-style-type: none;
   width: 100%;
   align-self: center;
-  border: 5px solid orange;
+  /* remove border when finished  */
+  border: 2px solid orange; 
+  border-bottom: 5px solid orange;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80vw;
+  width: 60vw;
 }
 
 /* Might need go change this to grid */
@@ -131,9 +133,6 @@ label {
 
 .completed-list-item {
   text-decoration: line-through;
-  border: 5px solid blue;
-  text-align: center;
-  font-weight: 400;
 }
 
 /* ---------- Delete Button ---------- */

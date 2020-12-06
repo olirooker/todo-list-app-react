@@ -16,7 +16,7 @@ class App extends React.Component {
   //   this.setState(savedState);
   // };
 
-  // componentDidUpdate() {};
+  componentDidUpdate() { };
 
   addToDo = (newItem) => {
     this.setState((currentState) => {
