@@ -116,6 +116,12 @@ label {
   width: 100vw;
 }
 
+/* Might need go change this to grid */
+.list-element-container {
+  display: flex;
+  align-items: center;
+}
+
 .list-item {
   border: 5px solid blue;
   text-align: center;

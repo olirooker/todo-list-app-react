@@ -39,7 +39,8 @@ class App extends React.Component {
         todos: newToDos
       }
       return newState;
-    }, () => { console.log(this.state) }
+    }
+      // , () => { console.log(this.state) }
       // , () => {
       //   localStorage.setItem("state", JSON.stringify(this.state));
       // }
