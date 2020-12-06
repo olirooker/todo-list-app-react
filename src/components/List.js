@@ -1,13 +1,14 @@
 import React from "react";
 
-const List = (props) => {
+const List = ({ todos, deleteToDo, toggleIsCompleted }) => {
 
     return (
         <ul className="list-container">
-            {props.todos.map((todo) => {
-                return <li className="list-item" key={todo.item} id={todo.item}>
+            {todos.map((todo) => {
+                return <li className="list-item" key={todo.item} id={todo.item} onClick={toggleIsCompleted}>
+                    <i class="fa fa-square-o"></i>
                     {todo.item}
-                    <button className="delete-button" onClick={() => { props.deleteToDo(todo.item) }}><i className="fa fa-trash"></i></button>
+                    <button className="delete-button" onClick={() => { deleteToDo(todo.item) }}><i className="fa fa-trash"></i></button>
                 </li>;
             })}
         </ul>

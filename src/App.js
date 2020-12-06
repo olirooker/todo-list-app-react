@@ -11,10 +11,10 @@ class App extends React.Component {
     filterBy: 'all', // this would change depending on which button is pressed
   };
 
-  componentDidMount() {
-    const savedState = JSON.parse(localStorage.getItem("state"));
-    this.setState(savedState);
-  };
+  // componentDidMount() {
+  //   const savedState = JSON.parse(localStorage.getItem("state"));
+  //   this.setState(savedState);
+  // };
 
   // componentDidUpdate() {};
 
@@ -22,9 +22,11 @@ class App extends React.Component {
     this.setState((currentState) => {
       const newState = { todos: [newItem, ...currentState.todos] };
       return newState;
-    }, () => {
-      localStorage.setItem("state", JSON.stringify(this.state));
-    });
+    }
+      // , () => {
+      //   localStorage.setItem("state", JSON.stringify(this.state));
+      // }
+    );
   };
 
   deleteToDo = (name) => {
@@ -36,9 +38,15 @@ class App extends React.Component {
         todos: newTasks
       }
       return newState;
-    }, () => {
-      localStorage.setItem("state", JSON.stringify(this.state));
-    })
+    }
+      // , () => {
+      //   localStorage.setItem("state", JSON.stringify(this.state));
+      // }
+    )
+  };
+
+  toggleIsCompleted = () => {
+
   };
 
   changeFilter = (condition) => {
@@ -59,7 +67,7 @@ class App extends React.Component {
         <Header />
         <TaskAdder addToDo={this.addToDo} />
         <Filter changeFilter={this.changeFilter} />
-        <List todos={this.state.todos} deleteToDo={this.deleteToDo} />
+        <List todos={this.state.todos} deleteToDo={this.deleteToDo} toggleIsCompleted={this.toggleIsCompleted} />
       </div >
     );
   };

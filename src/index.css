@@ -141,3 +141,7 @@ label {
   display: inline-block;
   border: 5px solid orangered;
 }
+
+.complete {
+  text-decoration: line-through;
+}
