@@ -22,11 +22,12 @@ class App extends React.Component {
     this.setState((currentState) => {
       const newState = { todos: [newItem, ...currentState.todos] };
       return newState;
-    }
+    }, () => { console.log(this.state) }
       // , () => {
       //   localStorage.setItem("state", JSON.stringify(this.state));
       // }
     );
+
   };
 
   deleteToDo = (name) => {
