@@ -122,6 +122,13 @@ label {
   font-weight: 400;
 }
 
+.completed-list-item {
+  text-decoration: line-through;
+  border: 5px solid blue;
+  text-align: center;
+  font-weight: 400;
+}
+
 /* ---------- Delete Button ---------- */
 
 .delete-button {
@@ -140,8 +147,4 @@ label {
 .filter-buttons {
   display: inline-block;
   border: 5px solid orangered;
-}
-
-.complete {
-  text-decoration: line-through;
 }
