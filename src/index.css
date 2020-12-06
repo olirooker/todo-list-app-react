@@ -19,7 +19,7 @@ body {
 }
 
 .app-container {
-  border: 5px solid green;
+  border-bottom: 5px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,13 +113,14 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 80vw;
 }
 
 /* Might need go change this to grid */
 .list-element-container {
   display: flex;
   align-items: center;
+  border: 5px solid greenyellow
 }
 
 .list-item {
