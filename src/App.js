@@ -22,7 +22,7 @@ class App extends React.Component {
     this.setState((currentState) => {
       const newState = { todos: [newItem, ...currentState.todos] };
       return newState;
-    }, () => { console.log(this.state) }
+    }
       // , () => {
       //   localStorage.setItem("state", JSON.stringify(this.state));
       // }
@@ -32,22 +32,41 @@ class App extends React.Component {
 
   deleteToDo = (name) => {
     this.setState(previousState => {
-      const newTasks = previousState.todos.filter(todo => {
+      const newToDos = previousState.todos.filter(todo => {
         return todo.item !== name;
       })
       const newState = {
-        todos: newTasks
+        todos: newToDos
       }
       return newState;
-    }
+    }, () => { console.log(this.state) }
       // , () => {
       //   localStorage.setItem("state", JSON.stringify(this.state));
       // }
     )
   };
 
-  toggleIsCompleted = () => {
-
+  toggleIsCompleted = (id) => {
+    this.setState(previousState => {
+      const newToDos = previousState.todos.map(todo => {
+        if (todo.item === id) {
+          const newTodo = {
+            item: todo.item,
+            isCompleted: !todo.isCompleted
+          }
+          return newTodo;
+        }
+        else return todo;
+      })
+      const newState = {
+        todos: newToDos
+      }
+      return newState;
+    }, () => { console.log(this.state) }
+      // , () => {
+      //   localStorage.setItem("state", JSON.stringify(this.state));
+      // }
+    )
   };
 
   changeFilter = (condition) => {

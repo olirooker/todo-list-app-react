@@ -12,7 +12,7 @@ class TaskAdder extends React.Component {
   };
 
   handleChange = (event) => {
-    this.setState({ [event.target.id]: event.target.value, isComplete: false });
+    this.setState({ [event.target.id]: event.target.value, isCompleted: false });
   };
 
   render() {
