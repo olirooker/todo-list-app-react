@@ -106,6 +106,8 @@ label {
 /* ---------- End of Add Button ---------- */
 
 .list-container {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   width: 100%;
   align-self: center;
@@ -120,12 +122,17 @@ label {
 
 /* Might need go change this to grid */
 .list-element-container {
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
-  border: 5px solid greenyellow
+  border: 5px solid greenyellow;
+  cursor: pointer;
 }
 
 .list-item {
+  margin: 0;
+  padding: 0;
   border: 5px solid blue;
   text-align: center;
   font-weight: 400;
@@ -138,6 +145,7 @@ label {
 /* ---------- Delete Button ---------- */
 
 .delete-button {
+  margin: 0;
   display: inline-block;
   border: none;
   padding: 10px 20px;
