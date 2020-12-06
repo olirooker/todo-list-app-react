@@ -16,7 +16,9 @@ class App extends React.Component {
   //   this.setState(savedState);
   // };
 
-  // componentDidUpdate() { };
+  componentDidUpdate() {
+    return this.filterList()
+  };
 
   addToDo = (newItem) => {
     this.setState((currentState) => {
@@ -76,7 +78,21 @@ class App extends React.Component {
   };
 
   filterList = () => {
-
+    if (this.state.filterBy === 'all') {
+      console.log(this.state.todos.filter(todo => {
+        if (todo.isCompleted === false || todo.isCompleted === false) {
+          return todo
+        }
+      }))
+    } else if (this.state.filterBy === 'active') {
+      console.log(this.state.todos.filter(todo => {
+        return todo.isCompleted === false;
+      }))
+    } else if (this.state.filterBy === 'completed') {
+      console.log(this.state.todos.filter(todo => {
+        return todo.isCompleted === true;
+      }))
+    }
   };
 
   render() {

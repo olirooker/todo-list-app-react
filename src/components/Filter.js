@@ -2,6 +2,8 @@ import React from 'react';
 
 const Filter = ({ changeFilter }) => {
 
+
+
     return (
         <div className="filter-buttons">
             <button onClick={() => { changeFilter('all') }}>All</button>
