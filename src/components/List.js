@@ -6,8 +6,8 @@ const List = ({ todos, deleteToDo, toggleIsCompleted }) => {
         <ul className="list-container">
             {todos.map((todo) => {
                 return <li key={todo.item} id={todo.item} className="list-element-container">
-                    <i className={todos.isCompleted ? "fa fa-check-square" : "fa fa-square-o"}></i>
-                    <p className={todos.isCompleted ? "completed-list-item" : "list-item"} onClick={() => { toggleIsCompleted(todo.item) }}>{todo.item}</p>
+                    <i className={todo.isCompleted ? "fa fa-check-square" : "fa fa-square-o"}></i>
+                    <p className={todo.isCompleted ? "completed-list-item" : "list-item"} onClick={() => { toggleIsCompleted(todo.item) }}>{todo.item}</p>
                     <button className="delete-button" onClick={() => { deleteToDo(todo.item) }}><i className="fa fa-trash"></i></button>
                 </li>;
             })}

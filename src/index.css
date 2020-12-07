@@ -139,6 +139,8 @@ label {
 }
 
 .completed-list-item {
+  margin: 0;
+  padding: 0;
   text-decoration: line-through;
 }
 

@@ -77,21 +77,24 @@ class App extends React.Component {
     })
   };
 
+  // move the filterList into the List file and filter the props before it hits the map.
+  // refactor to make cleaner and not repeat as much.
+
   filterList = () => {
     if (this.state.filterBy === 'all') {
-      console.log(this.state.todos.filter(todo => {
-        if (todo.isCompleted === false || todo.isCompleted === false) {
+      return this.state.todos.filter(todo => {
+        if (todo.isCompleted === false || todo.isCompleted === true) {
           return todo
         }
-      }))
+      })
     } else if (this.state.filterBy === 'active') {
-      console.log(this.state.todos.filter(todo => {
+      return this.state.todos.filter(todo => {
         return todo.isCompleted === false;
-      }))
+      })
     } else if (this.state.filterBy === 'completed') {
-      console.log(this.state.todos.filter(todo => {
+      return this.state.todos.filter(todo => {
         return todo.isCompleted === true;
-      }))
+      })
     }
   };
 
@@ -101,7 +104,7 @@ class App extends React.Component {
         <Header />
         <TaskAdder addToDo={this.addToDo} />
         <Filter changeFilter={this.changeFilter} />
-        <List todos={this.state.todos} deleteToDo={this.deleteToDo} toggleIsCompleted={this.toggleIsCompleted} />
+        <List todos={this.filterList(this.state.todos)} deleteToDo={this.deleteToDo} toggleIsCompleted={this.toggleIsCompleted} />
       </div >
     );
   };
