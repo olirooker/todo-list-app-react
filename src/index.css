@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +9,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -31,11 +31,11 @@ label {
 }
 
 .input-label {
-  grid-area: 'input';
+  grid-area: "input";
 }
 
 .button-label {
-  grid-area: 'button';
+  grid-area: "button";
   width: 100%;
 }
 
@@ -45,7 +45,7 @@ label {
   width: 60vw;
   display: grid;
   grid-template-columns: 4fr auto;
-  grid-template-areas: 'input button';
+  grid-template-areas: "input button";
   align-items: center;
 }
 
@@ -85,7 +85,7 @@ label {
 }
 
 .add-button1 {
-  background-color: #2f80ed;; 
+  background-color: #2f80ed;
   color: white;
   border-color: #2f80ed;
 }
@@ -99,7 +99,7 @@ label {
   outline: none;
 }
 
-.add-button:active{
+.add-button:active {
   transform: translateY(4px);
 }
 
@@ -112,7 +112,7 @@ label {
   width: 100%;
   align-self: center;
   /* remove border when finished  */
-  border: 2px solid orange; 
+  border: 2px solid orange;
   border-bottom: 5px solid orange;
   display: flex;
   flex-direction: column;
@@ -142,6 +142,7 @@ label {
   margin: 0;
   padding: 0;
   text-decoration: line-through;
+  border: 5px solid blue;
 }
 
 /* ---------- Delete Button ---------- */
