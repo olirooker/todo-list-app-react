@@ -83,21 +83,13 @@ class App extends React.Component {
   // refactor to make cleaner and not repeat as much.
 
   filterList = () => {
-    if (this.state.filterBy === "all") {
-      return this.state.todos.filter((todo) => {
-        if (todo.isCompleted === false || todo.isCompleted === true) {
-          return todo;
-        }
-      });
-    } else if (this.state.filterBy === "active") {
-      return this.state.todos.filter((todo) => {
+    return this.state.todos.filter((todo) => {
+      if (this.state.filterBy === "all") return todo;
+      else if (this.state.filterBy === "active")
         return todo.isCompleted === false;
-      });
-    } else if (this.state.filterBy === "completed") {
-      return this.state.todos.filter((todo) => {
+      else if (this.state.filterBy === "completed")
         return todo.isCompleted === true;
-      });
-    }
+    });
   };
 
   render() {
