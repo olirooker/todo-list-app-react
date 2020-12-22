@@ -23,7 +23,7 @@ const Filter = ({ changeFilter, filterBy }) => {
           changeFilter("completed");
         }}
       >
-        Complete
+        Completed
       </button>
     </div>
   );
