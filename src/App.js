@@ -76,9 +76,7 @@ class App extends React.Component {
   };
 
   changeFilter = (condition) => {
-    this.setState((currentState) => {
-      return { filterBy: condition };
-    });
+    this.setState({ filterBy: condition });
   };
 
   // move the filterList into the List file and filter the props before it hits the map.
