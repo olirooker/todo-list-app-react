@@ -105,7 +105,10 @@ class App extends React.Component {
       <div className="app-container">
         <Header />
         <TaskAdder addToDo={this.addToDo} />
-        <Filter changeFilter={this.changeFilter} />
+        <Filter
+          changeFilter={this.changeFilter}
+          filterBy={this.state.filterBy}
+        />
         <List
           todos={this.filterList(this.state.todos)}
           deleteToDo={this.deleteToDo}

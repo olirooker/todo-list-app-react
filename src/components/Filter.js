@@ -1,7 +1,8 @@
-const Filter = ({ changeFilter }) => {
+const Filter = ({ changeFilter, filterBy }) => {
   return (
     <div className="filter-buttons">
       <button
+        className={filterBy === "all" ? "filter-on" : "filter-off"}
         onClick={() => {
           changeFilter("all");
         }}
@@ -9,6 +10,7 @@ const Filter = ({ changeFilter }) => {
         All
       </button>
       <button
+        className={filterBy === "active" ? "filter-on" : "filter-off"}
         onClick={() => {
           changeFilter("active");
         }}
@@ -16,6 +18,7 @@ const Filter = ({ changeFilter }) => {
         Active
       </button>
       <button
+        className={filterBy === "completed" ? "filter-on" : "filter-off"}
         onClick={() => {
           changeFilter("completed");
         }}

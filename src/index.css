@@ -162,6 +162,50 @@ label {
 /* ---------- End of Delete Button ---------- */
 
 .filter-buttons {
+  margin: 20px auto;
   display: inline-block;
-  border: 5px solid orangered;
+  border: 1px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+}
+
+.filter-on {
+  background-color: #2f80ed; /* Green */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+
+.filter-on:focus {
+  outline: none;
+}
+
+.filter-off {
+  background-color: white;
+  border: none;
+  color: #333;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.filter-off:hover {
+  background-color: #2f80ed;
+  border: none;
+  border-radius: 25px;
+  color: white;
+}
+
+.filter-off:focus {
+  outline: none;
 }
