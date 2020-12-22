@@ -12,7 +12,10 @@ class TaskAdder extends React.Component {
   };
 
   handleChange = (event) => {
-    this.setState({ [event.target.id]: event.target.value, isCompleted: false });
+    this.setState({
+      [event.target.id]: event.target.value,
+      isCompleted: false,
+    });
   };
 
   render() {
@@ -31,7 +34,9 @@ class TaskAdder extends React.Component {
         </label>
 
         <label className="button-label">
-          <button type="submit" className="add-button add-button1">add</button>
+          <button type="submit" className="add-button add-button1">
+            add
+          </button>
         </label>
       </form>
     );
