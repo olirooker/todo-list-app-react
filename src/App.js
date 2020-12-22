@@ -6,7 +6,7 @@ import TaskAdder from "./components/TaskAdder";
 
 class App extends React.Component {
   state = {
-    todos: [{ item: "The first item", isCompleted: false }],
+    todos: [{ item: "Start a todo list", isCompleted: false }],
     filterBy: "all",
   };
 

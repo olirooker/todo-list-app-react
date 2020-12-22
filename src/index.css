@@ -19,7 +19,6 @@ body {
 }
 
 .app-container {
-  border-bottom: 5px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,7 +41,8 @@ label {
 .task-adder {
   border: none;
   margin: 0;
-  width: 60vw;
+  width: 50vw;
+  min-width: 300px;
   display: grid;
   grid-template-columns: 4fr auto;
   grid-template-areas: "input button";
@@ -111,9 +111,6 @@ label {
   list-style-type: none;
   width: 100%;
   align-self: center;
-  /* remove border when finished  */
-  border: 2px solid orange;
-  border-bottom: 5px solid orange;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,34 +123,32 @@ label {
   padding: 0;
   display: flex;
   align-items: center;
-  border: 5px solid greenyellow;
   cursor: pointer;
 }
 
 .list-item {
-  margin: 0;
+  margin: 10px 20px;
   padding: 0;
-  border: 5px solid blue;
   text-align: center;
   font-weight: 400;
+  color: black;
 }
 
 .completed-list-item {
-  margin: 0;
+  margin: 10px 20px;
   padding: 0;
   text-decoration: line-through;
-  border: 5px solid blue;
+  color: grey;
 }
 
 /* ---------- Delete Button ---------- */
 
 .delete-button {
   margin: 0;
+  padding: 0;
   display: inline-block;
   border: none;
-  padding: 10px 20px;
-  color: lightgray;
-  /* background-color: #e13d3a; */
+  color: gray;
   background-color: transparent;
   border-radius: 8px;
   font-size: 1rem;

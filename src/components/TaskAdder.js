@@ -35,7 +35,7 @@ class TaskAdder extends React.Component {
 
         <label className="button-label">
           <button type="submit" className="add-button add-button1">
-            add
+            Add
           </button>
         </label>
       </form>
