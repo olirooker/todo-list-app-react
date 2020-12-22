@@ -80,7 +80,6 @@ class App extends React.Component {
   };
 
   // move the filterList into the List file and filter the props before it hits the map.
-  // refactor to make cleaner and not repeat as much.
 
   filterList = () => {
     return this.state.todos.filter((todo) => {
