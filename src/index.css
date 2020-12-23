@@ -184,6 +184,7 @@ label {
 .filter-off {
   background-color: white;
   border: none;
+  border-radius: 25%;
   color: #333;
   padding: 10px 24px;
   text-align: center;
