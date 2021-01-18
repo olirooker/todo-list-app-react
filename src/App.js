@@ -1,19 +1,19 @@
-import React from "react";
-import Filter from "./components/Filter";
-import Header from "./components/Header";
-import List from "./components/List";
-import TaskAdder from "./components/TaskAdder";
+import React from 'react';
+import Filter from './components/Filter';
+import Header from './components/Header';
+import List from './components/List';
+import TaskAdder from './components/TaskAdder';
 
 class App extends React.Component {
   state = {
-    todos: [{ item: "Start a todo list", isCompleted: false }],
-    filterBy: "all",
+    todos: [{ item: 'Start a todo list', isCompleted: false }],
+    filterBy: 'all',
   };
 
-  // componentDidMount() {
-  //   const savedState = JSON.parse(localStorage.getItem("state"));
-  //   this.setState(savedState);
-  // };
+  componentDidMount() {
+    const savedState = JSON.parse(localStorage.getItem('state'));
+    this.setState(savedState);
+  }
 
   componentDidUpdate() {
     return this.filterList();
@@ -24,10 +24,10 @@ class App extends React.Component {
       (currentState) => {
         const newState = { todos: [newItem, ...currentState.todos] };
         return newState;
+      },
+      () => {
+        localStorage.setItem('state', JSON.stringify(this.state));
       }
-      // , () => {
-      //   localStorage.setItem("state", JSON.stringify(this.state));
-      // }
     );
   };
 
@@ -41,11 +41,10 @@ class App extends React.Component {
           todos: newToDos,
         };
         return newState;
+      },
+      () => {
+        localStorage.setItem('state', JSON.stringify(this.state));
       }
-      // , () => { console.log(this.state) }
-      // , () => {
-      //   localStorage.setItem("state", JSON.stringify(this.state));
-      // }
     );
   };
 
@@ -67,11 +66,8 @@ class App extends React.Component {
         return newState;
       },
       () => {
-        console.log(this.state);
+        localStorage.setItem('state', JSON.stringify(this.state));
       }
-      // , () => {
-      //   localStorage.setItem("state", JSON.stringify(this.state));
-      // }
     );
   };
 
@@ -79,21 +75,19 @@ class App extends React.Component {
     this.setState({ filterBy: condition });
   };
 
-  // move the filterList into the List file and filter the props before it hits the map.
-
   filterList = () => {
     return this.state.todos.filter((todo) => {
-      if (this.state.filterBy === "all") return todo;
-      else if (this.state.filterBy === "active")
+      if (this.state.filterBy === 'all') return todo;
+      else if (this.state.filterBy === 'active')
         return todo.isCompleted === false;
-      else if (this.state.filterBy === "completed")
+      else if (this.state.filterBy === 'completed')
         return todo.isCompleted === true;
     });
   };
 
   render() {
     return (
-      <div className="app-container">
+      <div className='app-container'>
         <Header />
         <TaskAdder addToDo={this.addToDo} />
         <Filter
